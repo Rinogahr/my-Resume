@@ -1,0 +1,26 @@
+.containerTitle{
+    background-image: url('../../img/topo.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* justify-content: center;
+    align-items: stretch; */
+    padding: 0rem 0rem 0rem 0.9rem;
+}
+.containerTitle div:first-child{
+    color: #fafafa;
+    font-weight: 600;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5rem 0rem 0.9rem 0.5rem;
+}
+.containerTitle div:last-child{
+    color: #8ee1ee;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0rem 0rem 0rem 0.5rem;
+}

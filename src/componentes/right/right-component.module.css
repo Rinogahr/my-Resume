@@ -1,0 +1,8 @@
+.containerRight{
+    width: 100%;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}

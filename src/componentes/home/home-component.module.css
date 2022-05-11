@@ -1,0 +1,15 @@
+html body{
+    padding: 0;
+    margin: 0;
+    
+}
+
+.container{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    width: 210mm;
+    height: 238mm;
+    box-shadow: 5px 7px 10px 0px;
+}
