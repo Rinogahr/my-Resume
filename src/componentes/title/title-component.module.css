@@ -9,6 +9,8 @@
     /* justify-content: center;
     align-items: stretch; */
     padding: 0rem 0rem 0rem 0.9rem;
+    /* border: solid 1px red; */
+    margin-bottom: 1.5rem;
 }
 .containerTitle div:first-child{
     color: #fafafa;

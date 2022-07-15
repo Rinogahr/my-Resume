@@ -1,0 +1,32 @@
+.containerInfo{
+    padding: 12px;
+    /* border: solid 1px red; */
+}
+
+.infoIcon{
+    display: flex;
+    flex-direction: row;
+}
+
+.infoIcon div:last-child b{
+    color: #2f68be;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.infoIcon div:nth-child(2){
+    border: solid 1px red;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+}
+
+.infoIcon div:nth-child(1){
+    font-size: 1.2rem;
+    color: #0C4AA5;
+    
+    
+}
+
