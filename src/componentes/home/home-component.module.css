@@ -1,15 +1,26 @@
-html body{
-    padding: 0;
-    margin: 0;
-    
+.page {
+  min-height: 100vh;
+  background: #edf2f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
 }
 
-.container{
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    width: 210mm;
-    height: 238mm;
-    box-shadow: 5px 7px 10px 0px;
+.container {
+  width: min(100%, 1080px);
+  min-height: 760px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.2);
+  background: linear-gradient(120deg, #0f172a 0%, #0f172a 34%, #f8fafc 34%, #f8fafc 100%);
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
 }

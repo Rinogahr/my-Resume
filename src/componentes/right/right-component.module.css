@@ -1,9 +1,7 @@
-.containerRight{
-    width: 100%;
-    background-color: #fafafa;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    /* justify-content: space-between; */
-    /* border: solid 1px red; */
+.containerRight {
+  background-color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 20px;
 }

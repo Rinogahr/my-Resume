@@ -1,4 +1,67 @@
-.containerLeft{
-    width: 45%;
-    background-color: #1E293A;
+.containerLeft {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.containerLeft::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      160deg,
+      rgba(15, 23, 42, 0.9),
+      rgba(30, 41, 59, 0.9)
+    ),
+    url('/4866160.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.45;
+}
+
+.containerLeft > * {
+  position: relative;
+  z-index: 1;
+}
+
+.profileCard {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+  padding-bottom: 20px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #bae6fd;
+}
+
+.textItem {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.listItem {
+  line-height: 1.4;
+  font-size: 0.92rem;
 }
