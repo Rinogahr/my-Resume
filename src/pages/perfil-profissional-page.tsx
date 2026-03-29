@@ -1,14 +1,12 @@
-import { FormEvent, useState } from 'react';
-
 interface PerfilCard {
   title: string;
   content: string;
 }
 
 function PerfilProfissionalPage() {
-  const summary = `Com mais de 10 anos de experiência em desenvolvimento, manutenção e evolução de sistemas web e mobile. Experiência em ERPs, integrações, automação de processos e plataformas Low Code. Foco em código limpo, escalável, performance e alinhamento às regras de negócio. Focado em criar interfaces modernas, acessíveis e responsivas com atenção a performance e experiência do usuário.`
+  const summary = `Com mais de 10 anos de experiência em desenvolvimento, manutenção e evolução de sistemas web e mobile. Experiência em ERPs, integrações, automação de processos e plataformas Low Code. Foco em código limpo, escalável, performance e alinhamento às regras de negócio. Focado em criar interfaces modernas, acessíveis e responsivas com atenção a performance e experiência do usuário.`;
 
-  const [cards, setCards] = useState<PerfilCard[]>([
+  const cards: PerfilCard[] = [
     {
       title: 'Foco Principal no Front-End',
       content:
@@ -24,50 +22,7 @@ function PerfilProfissionalPage() {
       content:
         'Atuar em projetos desafiadores, contribuindo com boas práticas de front-end, back-end, escalabilidade, performance, experiência do usuário, e construção de produtos digitais consistentes.',
     },
-  ]);
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const [editingIndex, setEditingIndex] = useState<number | null>(null);
-
-  const resetForm = () => {
-    setTitle('');
-    setContent('');
-    setEditingIndex(null);
-  };
-
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    if (!title.trim() || !content.trim()) {
-      return;
-    }
-
-    if (editingIndex !== null) {
-      setCards((previous) =>
-        previous.map((item, index) =>
-          index === editingIndex ? { title: title.trim(), content: content.trim() } : item
-        )
-      );
-      resetForm();
-      return;
-    }
-
-    setCards((previous) => [...previous, { title: title.trim(), content: content.trim() }]);
-    resetForm();
-  };
-
-  const handleEdit = (index: number) => {
-    setTitle(cards[index].title);
-    setContent(cards[index].content);
-    setEditingIndex(index);
-  };
-
-  const handleDelete = (index: number) => {
-    setCards((previous) => previous.filter((_, currentIndex) => currentIndex !== index));
-    if (editingIndex === index) {
-      resetForm();
-    }
-  };
+  ];
 
   return (
     <article>

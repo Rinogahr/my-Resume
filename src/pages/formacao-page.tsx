@@ -1,14 +1,9 @@
-import { FormEvent, useState } from 'react';
+import { useState } from 'react';
 import { portfolioData } from '../data/portfolio-data';
 import { Education } from '../types/portfolio';
 
 function FormacaoPage() {
-  const [educationList, setEducationList] = useState<Education[]>(portfolioData.education);
-  const [course, setCourse] = useState('');
-  const [institution, setInstitution] = useState('');
-  const [period, setPeriod] = useState('');
-  const [details, setDetails] = useState('');
-  const [editingIndex, setEditingIndex] = useState<number | null>(null);
+  const [educationList] = useState<Education[]>(portfolioData.education);
 
   
 

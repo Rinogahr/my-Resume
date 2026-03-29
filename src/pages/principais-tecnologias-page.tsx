@@ -1,28 +1,9 @@
-import { FormEvent, useState } from 'react';
+import { useState } from 'react';
 import { portfolioData } from '../data/portfolio-data';
 import { Technology } from '../types/portfolio';
 
 function PrincipaisTecnologiasPage() {
-  const [technologies, setTechnologies] = useState<Technology[]>(portfolioData.technologies);
-  const [name, setName] = useState('');
-  const [level, setLevel] = useState('');
-  const [description, setDescription] = useState('');
-
-
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    if (!name.trim() || !level.trim() || !description.trim()) {
-      return;
-    }
-    const payload: Technology = {
-      name: name.trim(),
-      level: level.trim(),
-      description: description.trim(),
-    };
-
-
-    setTechnologies((previous) => [...previous, payload]);
-  };
+  const [technologies] = useState<Technology[]>(portfolioData.technologies);
 
   return (
     <article>

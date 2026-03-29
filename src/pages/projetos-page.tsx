@@ -1,65 +1,9 @@
-import { FormEvent, useState } from 'react';
+import { useState } from 'react';
 import { portfolioData } from '../data/portfolio-data';
 import { Project } from '../types/portfolio';
 
 function ProjetosPage() {
-  const [projects, setProjects] = useState<Project[]>(portfolioData.projects);
-  const [title, setTitle] = useState('');
-  const [stack, setStack] = useState('');
-  const [summary, setSummary] = useState('');
-  const [link, setLink] = useState('');
-  const [repositoryLink, setRepositoryLink] = useState('');
-  const [editingIndex, setEditingIndex] = useState<number | null>(null);
-
-  const resetForm = () => {
-    setTitle('');
-    setStack('');
-    setSummary('');
-    setLink('');
-    setRepositoryLink('');
-    setEditingIndex(null);
-  };
-
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    if (!title.trim() || !stack.trim() || !summary.trim() || !link.trim()) {
-      return;
-    }
-
-    const payload: Project = {
-      title: title.trim(),
-      stack: stack.trim(),
-      summary: summary.trim(),
-      link: link.trim(),
-      repositoryLink: link.trim(),
-    };
-
-    if (editingIndex !== null) {
-      setProjects((previous) => previous.map((item, index) => (index === editingIndex ? payload : item)));
-      resetForm();
-      return;
-    }
-
-    setProjects((previous) => [...previous, payload]);
-    resetForm();
-  };
-
-  const handleEdit = (index: number) => {
-    const current = projects[index];
-    setTitle(current.title);
-    setStack(current.stack);
-    setSummary(current.summary);
-    setLink(current.link || '');
-    setRepositoryLink(current.repositoryLink || '');
-    setEditingIndex(index);
-  };
-
-  const handleDelete = (index: number) => {
-    setProjects((previous) => previous.filter((_, currentIndex) => currentIndex !== index));
-    if (editingIndex === index) {
-      resetForm();
-    }
-  };
+  const [projects] = useState<Project[]>(portfolioData.projects);
 
   return (
     <article>

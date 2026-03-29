@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { portfolioData } from '../data/portfolio-data';
-import { Competency, technicalSkills } from '../types/portfolio';
+import { technicalSkills } from '../types/portfolio';
 
 function HabilidadesTecnicasPage() {
   const [habilidades] = useState<technicalSkills[]>(portfolioData.habiliadadesTecncas);

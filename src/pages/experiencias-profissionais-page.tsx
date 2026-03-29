@@ -1,14 +1,9 @@
-import { FormEvent, useState } from 'react';
+import { useState } from 'react';
 import { portfolioData } from '../data/portfolio-data';
 import { Experience } from '../types/portfolio';
 
 function ExperienciasProfissionaisPage() {
-  const [experiences, setExperiences] = useState<Experience[]>(portfolioData.experiences);
-  const [role, setRole] = useState('');
-  const [company, setCompany] = useState('');
-  const [period, setPeriod] = useState('');
-  const [highlights, setHighlights] = useState('');
-  const [editingIndex, setEditingIndex] = useState<number | null>(null);
+  const [experiences] = useState<Experience[]>(portfolioData.experiences);
 
   return (
     <article>
