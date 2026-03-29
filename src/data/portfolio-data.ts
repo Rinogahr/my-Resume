@@ -281,8 +281,8 @@ export const portfolioData: PortfolioData = {
       title: 'Portfólio Profissional',
       stack: 'React, TypeScript, Tailwind CSS',
       summary: 'Site pessoal responsivo para apresentar carreira e projetos.',
-      link: '',
-      repositoryLink: '',
+      link: 'https://my-resume-nine-opal.vercel.app/',
+      repositoryLink: 'https://github.com/Rinogahr/my-Resume',
     },
     // {
     //   title: 'Painel de Métricas',
